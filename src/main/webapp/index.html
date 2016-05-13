@@ -1,0 +1,26 @@
+
+<html>
+<head><script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script></head>
+<body>
+
+<h1>asdasdasdasd</h1>
+<script>
+
+console.log(new Date());
+for(var i = 0;i<1000;i++) {
+ $.get(
+         "/getUsers",
+         {},
+         onAjaxSuccess
+ );
+
+ function onAjaxSuccess(data)
+ {
+  console.log(new Date());
+ }
+}
+ console.log(new Date());
+
+</script>
+</body>
+</html>
