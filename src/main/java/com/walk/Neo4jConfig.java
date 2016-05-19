@@ -21,7 +21,7 @@ public class Neo4jConfig extends Neo4jConfiguration {
         config
                 .driverConfiguration()
                 .setDriverClassName("org.neo4j.ogm.drivers.http.driver.HttpDriver")
-                .setURI("http://neo_heroku_rahsaan_abshire_dodgerblue:T4UeeCZvsY9tnYBgHbn72hWcs2DLEhWCHyAsuSbK@neo-heroku-rahsaan-abshire-dodgerblue.digital-ocean.graphstory.com:7473");
+                .setURI("https://neo_heroku_rahsaan_abshire_dodgerblue:T4UeeCZvsY9tnYBgHbn72hWcs2DLEhWCHyAsuSbK@neo-heroku-rahsaan-abshire-dodgerblue.digital-ocean.graphstory.com:7473");
         return config;
     }
 
