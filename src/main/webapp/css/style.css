@@ -1,0 +1,108 @@
+html, body, #react-root  {
+	width: 100%;
+	height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto;
+    background-color: #EDEEED;
+}
+
+
+.centerMarker{
+  position:absolute;
+  /*url of the marker*/
+  background:url(http://maps.gstatic.com/mapfiles/markers2/marker.png) no-repeat;
+  /*center the marker*/
+  top:50%;left:50%;
+
+  z-index:1;
+  /*fix offset when needed*/
+  margin-left:-10px;
+  margin-top:-34px;
+  /*size of the image*/
+  height:34px;
+  width:20px;
+
+  cursor:pointer;
+}
+
+.rightPanel {
+	position: absolute;
+	top: 64px;
+	right: 0px;
+	width: 300px;
+	height: 500px;
+	background-color: #fff;
+	padding: 10px;
+
+}
+
+.infoWindow {
+	width: 250px;
+	height: 150px;
+
+}
+
+.infoWindow p {
+	text-align: center;
+	font-weight: bold;
+}
+
+.infoWindow img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+.pokenmon {
+	will-change: transform;
+}
+
+.pokemon:hover {
+	background-color: #00BCD5 !important;
+	cursor: pointer;
+}
+
+.pokemonPaper-enter {
+	transform: scale(0);
+}
+
+.pokemonPaper-enter.pokemonPaper-enter-active {
+	transform: scale(1);
+	transition: transform 500ms ease-in;
+}
+
+.pokemonPaper-leave {
+	transform: scale(1);
+}
+
+.pokemonPaper-leave.pokemonPaper-leave-active {
+	transform: scale(0);
+	transition: transform 300ms ease-in;
+}
+
+.pokemonModal {
+	position: fixed;
+	width: 300px;
+	height: 450px;
+	margin: 20px 20px 20px 0px;
+	top: 64px;
+	left: calc(100%/2 - 720px/2 + 720px);
+}
+
+@media (max-width: 1345px){
+	.pokemonModal {
+		left: calc(100%/2 - 300px/2);
+	}
+}
+
+.pokemonTable {
+	width: 90%;
+	border-collapse: collapse;
+}
+
+.pokemonTable td{
+	border: 1px solid black;
+	text-align: center;
+}
+
