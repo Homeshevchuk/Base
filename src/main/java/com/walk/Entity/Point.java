@@ -1,7 +1,9 @@
 package com.walk.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.Property;
 
 /**
  * Created by Bogdan on 5/13/2016.
@@ -9,32 +11,49 @@ import org.neo4j.ogm.annotation.NodeEntity;
 @NodeEntity
 public class Point {
     @GraphId
+    @JsonIgnore
     private Long id;
-    int x;
-    int y;
-    String description;
+    @Property
+    int pointId;
+    @Property
+    private double x;
+    @Property
+    private double y;
 
-    public int getX() {
+    public Point(){
+
+    }
+    public Point(int x, int y, String description){
+        this.pointId = pointId;
+        this.x = x;
+        this.y = y;
+    }
+    public double getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public int getY() {
+    public Long getId() {
+        return id;
+    }
+
+    public double getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
     }
 
-    public String getDescription() {
-        return description;
+
+    public int getPointId() {
+        return pointId;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setPointId(int pointId) {
+        this.pointId = pointId;
     }
 }

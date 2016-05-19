@@ -12,25 +12,22 @@ import org.springframework.data.neo4j.server.RemoteServer;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableNeo4jRepositories(basePackages = "hello")
+@EnableNeo4jRepositories(basePackages = "com.walk")
 @EnableTransactionManagement
 public class Neo4jConfig extends Neo4jConfiguration {
 
-    @Bean
-    public Neo4jServer neo4jServer() {
-        return new RemoteServer("http://localhost:7474/", "neo4j", "123123123");
+    public org.neo4j.ogm.config.Configuration getConfiguration() {
+        org.neo4j.ogm.config.Configuration config = new org.neo4j.ogm.config.Configuration();
+        config
+                .driverConfiguration()
+                .setDriverClassName("org.neo4j.ogm.drivers.http.driver.HttpDriver")
+                .setURI("http://neo_heroku_rahsaan_abshire_dodgerblue:T4UeeCZvsY9tnYBgHbn72hWcs2DLEhWCHyAsuSbK@neo-heroku-rahsaan-abshire-dodgerblue.digital-ocean.graphstory.com:7473");
+        return config;
     }
 
     @Bean
     public SessionFactory getSessionFactory() {
-        // with domain entity base package(s)
-        return new SessionFactory("com.walk.Entity");
-    }
-
-    // needed for session in view in web-applications
-    @Bean
-    public Session getSession() throws Exception {
-        return super.getSession();
+        return new SessionFactory(getConfiguration(), "com.walk" );
     }
 }
 
