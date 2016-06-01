@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.boot:spring-boot-starter-security:1.4.0.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/1.4.0.BUILD-SNAPSHOT/spring-boot-starter-security-1.4.0.BUILD-20160518.155802-367.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/1.4.0.BUILD-SNAPSHOT/spring-boot-starter-security-1.4.0.BUILD-20160601.010706-397.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/1.4.0.BUILD-SNAPSHOT/spring-boot-starter-security-1.4.0.BUILD-20160518.155802-367-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/1.4.0.BUILD-SNAPSHOT/spring-boot-starter-security-1.4.0.BUILD-20160601.010706-397-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/1.4.0.BUILD-SNAPSHOT/spring-boot-starter-security-1.4.0.BUILD-20160518.155802-367-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-security/1.4.0.BUILD-SNAPSHOT/spring-boot-starter-security-1.4.0.BUILD-20160601.010706-397-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

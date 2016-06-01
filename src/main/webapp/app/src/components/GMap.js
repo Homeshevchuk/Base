@@ -17,14 +17,14 @@ export default class GMap {
 	}
 	static showAllWalks(){
 
-		var xmlhttp = new XMLHttpRequest(); 
+		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", "http://localhost:1488/Authorized/getAllWalks");
 		xmlhttp.onreadystatechange = function () {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			console.log(xmlhttp.responseText)
-			func(JSON.parse(xmlhttp.responseText))
-		}
-		}; 
+				console.log(xmlhttp.responseText)
+				func(JSON.parse(xmlhttp.responseText))
+			}
+		};
 		xmlhttp.send();
 
 

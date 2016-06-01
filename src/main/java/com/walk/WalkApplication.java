@@ -2,15 +2,10 @@ package com.walk;
 
 import com.walk.Entity.User;
 import com.walk.Entity.Walk;
-import com.walk.QueryResult.SelectWalkResult;
-import org.apache.catalina.Context;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
-import org.springframework.boot.context.embedded.tomcat.TomcatContextCustomizer;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
@@ -22,7 +17,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -49,7 +43,7 @@ public class WalkApplication implements CommandLineRunner{
 	}
 	@Override
 	public void run(String... args) throws Exception {
-		if(!repository.findAll().iterator().hasNext()) {
+		if(!walksRepository.findAll().iterator().hasNext()){
 			createPerson1InDB();
 			createPerson2InDB();
 		}
@@ -70,7 +64,7 @@ public class WalkApplication implements CommandLineRunner{
 		user.setEmail("bshevchuk1@gmail.com");
 		user.setPhoneNumber("+380986780724");
 		user.setRegistered(Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()));
-		user.setImageUrl("/images/1.png");
+		user.setImageUrl("/src/main/webapp/images/1.png");
 		List<Walk> walkList = new ArrayList<>();
 		Walk walk = new Walk();
 		walk.setCompleted(false);
@@ -106,7 +100,7 @@ public class WalkApplication implements CommandLineRunner{
 		user.setPassword("123123123");
 		user.setPhoneNumber("+380986780724");
 		user.setRegistered(new Date());
-		user.setImageUrl("/images/2.png");
+		user.setImageUrl("/src/main/webapp/images/2.png");
 		List<Walk> walkList = new ArrayList<>();
 		Walk walk = new Walk();
 		walk.setCompleted(false);
